@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Quartz;
+﻿using Quartz;
 using System.Net;
 using System.Net.Mail;
-using Microsoft.Extensions.Configuration;
 
 
 namespace PRCSchd
@@ -36,7 +30,14 @@ namespace PRCSchd
                 Body = "This is a test email sent by the .NET scheduler",
                 IsBodyHtml = true
             };
-            mailMessage.To.Add("recipient@example.com");
+            //mailMessage.To.Add("recipient@example.com");
+
+            //using var smtpClient = new SmtpClient(smtpServer, smtpPort)
+            //{
+            //    Credentials = new NetworkCredential(senderEmail, senderPassword),
+            //    EnableSsl = useSsl
+            //};
+            mailMessage.To.Add("testuser@mailinator.com");
 
             using var smtpClient = new SmtpClient(smtpServer, smtpPort)
             {

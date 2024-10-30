@@ -1,5 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using PRCSchd;
 using Quartz;
 using Quartz.Impl;
